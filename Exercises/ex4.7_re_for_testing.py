@@ -28,7 +28,7 @@ class TestAnimalPatterns(unittest.TestCase):
         This method will contain the test code for the find_animals function.
 
         """
-        animals = (  # tuple of anaimal name
+        animals = (  # tuple of animal name
             "bandicoot",
             "bear",
             "blue tongue lizard",

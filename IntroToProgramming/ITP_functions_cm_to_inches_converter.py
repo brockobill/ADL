@@ -10,13 +10,11 @@ def cm_to_inches(cm):
 # this is a display box function
 def print_box():
     print('-' * 72)
-    print('|' + ' ' * 70 + '|')
     print('|' + "Enter a number to convert from centimetres to inches or 'x' to exit:".center(70) + '|')
-    print('|' + ' ' * 70 + '|')
     print('-' * 72)
 
 
-while True: # while loop to repat user prompt if bad imput or new etry
+while True: # while loop to repeat user prompt if bad input or new entry
     print_box() # calls the print_box function
     num = input("number: ") # prompts user to enter number for conversion
 
@@ -28,7 +26,7 @@ while True: # while loop to repat user prompt if bad imput or new etry
     try: # try block to handle bad input exceptions
         num = float(num) # enables floats to be entered
         result = cm_to_inches(num) # calls the cm_to_inches function with user entry parameter
-        print(f'{num} cm is {result:.2f} inches\n') # rounds float ansers to two decimal places
+        print(f'{num} cm is {result:.2f} inches\n') # rounds float answers to two decimal places
     except ValueError: # bad input exception handling
         print("That's not a valid number. Please try again.\n") # error message
 

@@ -11,7 +11,7 @@ phonebook = open('phonebook.csv', 'a')
 print("\nWelcome to the phone number program!")
 print("Enter person's name and phone number or hit enter to finish entering details.")
 
-# Start infinite loop to continuously prompt tuser for input
+# Start infinite loop to continuously prompt user for input
 while True:
     # Prompt user to enter a person's name
     name = input("\nEnter person's name: ")
