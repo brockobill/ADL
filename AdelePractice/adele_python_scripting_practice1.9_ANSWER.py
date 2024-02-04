@@ -14,16 +14,18 @@
 #    SameFirstLast([1, 2, 3]) → False
 #    SameFirstLast([1, 2, 3, 1]) → True
 
-
 # Write you function code below
 def SameFirstLast(nums):
-    """ 
-    The trick with this function was allowing for empty lists by check len(nums).
-    """
-    if len(nums) >= 1 and nums[0] == nums[-1]:
-        return True
-
-    return False
+    length = len(nums)
+    if length >= 1:
+        first = nums[0]
+        last = nums[length-1]
+        if first == last:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 
 # Pre defined test conditions to help you out

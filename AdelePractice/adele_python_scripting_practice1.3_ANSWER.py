@@ -15,22 +15,13 @@
 #    CountCode('aaacodebbb') → 1
 #    CountCode('codexxcode') → 2
 
+import re
 
 def CountCode(string):
-    import re
-    """ 
-    Return the number of times that the string "code" appears anywhere
-    in the given string, except we'll accept any letter for the 'd', 
-    so "cope" and "cooe" count.
-    """
-    count = 0
-
-    for i in range(len(string)):        
-        substring = string[i:i+4]  # extract a substring of length 4
-        if re.search('co.e', substring):  # Using regex to match 'code', 'cope', 'cooe', etc.
-            count += 1
-
-    return count
+  import re
+  regex = re.compile('co.e')
+  matches = re.findall(regex,string)
+  return len(matches)
 
 # Pre defined test conditions
 try:

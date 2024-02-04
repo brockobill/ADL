@@ -15,6 +15,29 @@
 #    CommonWord("black white black brown") → 2
 #    CommonWord("black dog, brown dog, white dog") → 3
 
+"""
+\b: This is a word boundary anchor. It asserts the position at the start or end of a word.
+
+[^\W\d_]+: This is a character class that matches one or more (+) characters. 
+Breaking it down:
+
+^: Inside a character class, it negates the class, so [^\W\d_] matches any character that 
+is not a non-word character, digit, or underscore.
+\W: Matches any non-word character (equivalent to [^a-zA-Z0-9_]).
+\d: Matches any digit (equivalent to [0-9]).
+_: Matches an underscore.
+So, [^\W\d_] matches any character that is a word character (letter), excluding digits and 
+underscores.
+
+\b: Another word boundary anchor, ensuring the end of the word.
+
+Putting it all together:
+
+r'\b[^\W\d_]+\b' matches whole words (sequences of letters) in a case-insensitive manner 
+(due to string.lower()). It ignores digits and underscores and ensures that the match is 
+a complete word by using word boundary anchors.
+"""
+
 import re
 from collections import Counter
 

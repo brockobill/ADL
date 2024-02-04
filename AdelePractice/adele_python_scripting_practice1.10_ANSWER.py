@@ -15,28 +15,15 @@
 #    xyzThere('abcxyz') → True
 #    xyzThere('abc.xyz') → False
 
-import re 
 
-# Write you function code below
 def xyzThere(string):
-    """ 
-    The pattern is '[^.]xyz|^xyz'.
-    [^.]: This part of the pattern is a negative character class. 
-    It means "any character except a period (.)". It ensures that "xyz" is 
-    not immediately preceded by a period.
-    xyz: This part matches the literal characters "xyz".
-    |: This is an OR operator in regular expressions, indicating that either 
-    side of the | can be a valid match.
-    ^xyz: This part matches the literal characters "xyz" at the beginning of the 
-    string (^ asserts the start of the string).
-    So, the entire pattern '[^.]xyz|^xyz' checks for either "xyz" not immediately 
-    preceded by a period or "xyz" at the beginning of the string.
-    """
-    count = 0
-    found = bool(re.search(r'[^.]xyz|^xyz', string))
-    if found == True:
-        count += 1
-    return count 
+  import re
+  regex1=re.compile('xyz')
+  regex2=re.compile('\.xyz')
+  result1=re.findall(regex1,string)
+  result2=re.findall(regex2,string)
+  if result2==[] and result1 !=[]:return True
+  else: return False
 
 # Pre defined test conditions to help you out
 try:

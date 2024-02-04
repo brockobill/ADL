@@ -20,7 +20,11 @@
 def CloseFar(a, b, c):
     def is_close(x, y):
         """
-        checks whether the absolute difference between x and y is less than or equal to 1.
+        Checks whether the absolute difference between x and y is less than or equal to 1.
+        We only need to check is_close of all parameter combos because if not is_close
+        than it is is_far.
+        We check if pairs (ab,ac), (ba, bc), and (ca, cb) are close, while the other 
+        pairs are not close.
         """
         return abs(x - y) <= 1
 

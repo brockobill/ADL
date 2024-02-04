@@ -18,7 +18,9 @@
 
 # Write your function code below
 def IntSum(list1, list2):
-    """ Enter your code here
+    """ 
+    When you convert a list to a set, it automatically removes any 
+    duplicate elements, leaving only the unique ones.
     """
     # Find the intersection of the two lists
     common_elements = set(list1) & set(list2)

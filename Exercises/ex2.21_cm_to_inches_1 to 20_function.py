@@ -30,11 +30,10 @@ def start():
     the conversion of 1 to 20 cm to inches and displays it to the user.
     """
     print_box()  # calls the print_box function
-    for i in range(1, 21):
+    for i in range(5, 101, 5):
         result = cm_to_inches(i)
         # aligns and formats output
         print(f"{i:<12} | {result:.2f}")
     print("\n")
-
 
 start()

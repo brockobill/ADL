@@ -24,7 +24,6 @@ def RoundSum(a, b, c):
     """
     my_list = [a,b,c]
     sum_nums = 0
-    sum_nums_list = []
     for i in my_list:
         math_floor = (i//10)
         math_modulus = (i%10)

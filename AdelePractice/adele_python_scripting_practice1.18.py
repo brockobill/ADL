@@ -19,7 +19,8 @@
 
 # Write your function code below
 def MoveBot(moves):
-    """ Enter your code here
+    """ 
+    This code gives the correct flag answer.
     """
     # Initialize the current position
     position = [0, 0]

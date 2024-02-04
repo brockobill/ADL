@@ -72,5 +72,4 @@ args = [
     (3,3,10), (3,3,11), (3,3,12), (3,3,13), (3,3,14), (3,3,15), (3,3,16), (3,3,17), (3,3,18)]
 for arg in args:
     total += MakeChocolate(arg[0], arg[1], arg[2])
-    print(total)
 print(total)
